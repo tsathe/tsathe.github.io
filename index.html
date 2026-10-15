@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Tejas Sathe is a Minimally Invasive and Bariatric Surgery fellow at Mount Sinai, interested in surgical education, AI, and operating room sustainability.">
+  <title>Tejas S. Sathe MD</title>
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      if (['light', 'dark', 'green'].includes(savedTheme)) document.documentElement.dataset.theme = savedTheme;
+    } catch {}
+  </script>
+  <style>
+    :root { color-scheme: light; --page: #fafaf7; --text: #111; --muted: #707070; --link: #0000ee; --visited: #551a8b; --lamp-turn: 0deg; --lamp-roll: 0deg; --elbow: 0deg; --lamp-shell: #fffcf1; --lamp-bulbs: #fff2b7; --lamp-rim: #606060; --green-glow: 0; }
+    html { background: var(--page); color: var(--text); transition: background-color 500ms ease, color 400ms ease; }
+    body { max-width: 650px; margin: 70px auto; padding: 0 10px; font-family: "Times New Roman", Times, serif; font-size: 1rem; line-height: 1.55; text-align: left; }
+    header { display: grid; grid-template-columns: minmax(0, 1fr) 44px; align-items: start; gap: 18px .5rem; margin-bottom: 1.5rem; }
+    header h1 { grid-column: 1 / -1; grid-row: 2; }
+    header .theme-toggle { grid-column: 2; grid-row: 1; margin: 0 -6px 0 0; }
+    .headshot { display: block; width: 52px; height: 52px; margin: 0; border-radius: 6px; object-fit: cover; }
+    h1 { font-size: 1.5rem; line-height: 1.2; margin: 0; }
+    h2 { font-size: 1em; font-weight: bold; margin: 32px 0 12px; }
+    section:first-of-type h2 { margin-top: 0; }
+    p { margin: 0; }
+    section p { line-height: 1.55; }
+    a { color: var(--link); text-underline-offset: 2px; }
+    a:visited { color: var(--visited); }
+    :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+    .theme-toggle { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 44px; padding: 0; margin: -8px -6px -8px 0; border: 0; background: transparent; color: inherit; cursor: pointer; }
+    .or-light { position: relative; display: block; width: 32px; height: 32px; perspective: 85px; }
+    .or-light::before { content: ""; position: absolute; inset: -9px; border-radius: 50%; background: radial-gradient(circle, rgba(84,224,126,.28), rgba(84,224,126,.08) 42%, transparent 72%); opacity: var(--green-glow); pointer-events: none; transition: opacity 650ms ease; }
+    .lamp-arm { position: absolute; inset: 0; width: 32px; height: 32px; }
+    .lamp-boom { position: absolute; inset: 0; transform-origin: 16px 7px; transform: rotate(var(--elbow)); transform-style: preserve-3d; transition: transform 700ms cubic-bezier(.22,.75,.2,1); }
+    .lamp-head { position: absolute; left: 5px; top: 10px; width: 20px; height: 20px; transform-style: preserve-3d; transform: rotateZ(var(--lamp-roll)) rotateY(var(--lamp-turn)); transition: transform 700ms cubic-bezier(.22,.75,.2,1); }
+    .lamp-face { position: absolute; inset: 0; width: 20px; height: 20px; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .lamp-front { transform: translateZ(.5px); color: var(--lamp-rim); }
+    .lamp-back { transform: rotateY(180deg) translateZ(.5px); color: #bbb; }
+    .theme-toggle:active .or-light { translate: 0 1px; }
+    @media (prefers-reduced-motion: reduce) { html, .lamp-head, .lamp-boom, .or-light::before { transition: none; } }
+    footer { margin-top: 2em; }
+    .signature { margin-top: 1rem; color: var(--muted); font-size: .8125rem; line-height: 1.4; }
+    .signature a, .signature a:visited { color: inherit; }
+    .institution { background-image: var(--highlight); background-repeat: no-repeat; background-position: 0 90%; background-size: 100% 0%; border-radius: 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; transition: background-size 180ms ease; }
+    .institution:is(:hover, :active) { background-size: 100% 100%; }
+    .sinai { --highlight: linear-gradient(110deg, rgba(0,172,211,.22), rgba(213,37,136,.18)); }
+    .columbia { --highlight: linear-gradient(rgba(117,178,221,.30), rgba(117,178,221,.30)); }
+    .ucsf { --highlight: linear-gradient(rgba(0,149,164,.24), rgba(0,149,164,.24)); }
+    .yale { --highlight: linear-gradient(rgba(43,92,170,.25), rgba(43,92,170,.25)); }
+    .princeton { --highlight: linear-gradient(rgba(245,128,37,.25), rgba(245,128,37,.25)); }
+    @media (prefers-reduced-motion: reduce) { .institution { transition: none; } }
+    :root[data-theme="dark"] { color-scheme: dark; --page: #151515; --text: #e6e6e6; --muted: #a0a0a0; --link: #a5baff; --visited: #c7aff2; --lamp-turn: -145deg; --lamp-roll: -18deg; --elbow: -16deg; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) { color-scheme: dark; --page: #151515; --text: #e6e6e6; --muted: #a0a0a0; --link: #a5baff; --visited: #c7aff2; --lamp-turn: -145deg; --lamp-roll: -18deg; --elbow: -16deg; }
+    }
+    :root[data-theme="green"] { color-scheme: dark; --page: #141a16; --text: #e1e8e3; --muted: #a0aca3; --link: #abc8b5; --visited: #c0ccbf; --lamp-turn: 38deg; --lamp-roll: 12deg; --elbow: 12deg; --lamp-shell: #203c28; --lamp-bulbs: #91eda4; --lamp-rim: #a2cab0; --green-glow: 1; }
+    @media (max-width: 600px) { body { margin: 36px auto; padding: 0 20px; } }
+    @media print { html { background: white; color: black; } body { margin: 0; max-width: none; } a, a:visited { color: black; } .theme-toggle { display: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img class="headshot" src="headshot.png" alt="Portrait of Tejas S. Sathe" width="52" height="52">
+      <h1>Tejas S. Sathe MD</h1>
+      <button class="theme-toggle" type="button" aria-label="Switch color theme">
+        <span class="or-light" aria-hidden="true">
+          <svg class="lamp-arm" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2h6M16 2v5" />
+          </svg>
+          <span class="lamp-boom">
+            <svg class="lamp-arm" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 7l9 6v7H15" />
+            </svg>
+            <span class="lamp-head">
+              <svg class="lamp-face lamp-front" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <circle cx="12" cy="12" r="10" fill="var(--lamp-shell)" />
+                <g class="lamp-lights" fill="var(--lamp-bulbs)" stroke-width=".85">
+                  <circle cx="8.5" cy="8.5" r="2.4" /><circle cx="15.5" cy="8.5" r="2.4" />
+                  <circle cx="8.5" cy="15.5" r="2.4" /><circle cx="15.5" cy="15.5" r="2.4" />
+                </g>
+              </svg>
+              <svg class="lamp-face lamp-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <circle cx="12" cy="12" r="10" fill="#232323" />
+              </svg>
+            </span>
+          </span>
+        </span>
+      </button>
+    </header>
+    <section aria-labelledby="background">
+      <h2 id="background">A bit about my background:</h2>
+      <p>Grew up in Cleveland, Ohio<br>
+      Studied molecular biology at <span class="institution princeton">Princeton</span><br>
+      Studied medicine at <span class="institution yale">Yale</span><br>
+      Surgery resident and then administrative chief resident at <span class="institution columbia">Columbia</span><br>
+      Spent two years working on surgical innovation at <span class="institution ucsf">UCSF</span><br>
+      Currently a Minimally Invasive and Bariatric Surgery fellow at <span class="institution sinai">Mount Sinai</span></p>
+    </section>
+
+    <section aria-labelledby="papers">
+      <h2 id="papers">Selected papers:</h2>
+      <p><a href="https://doi.org/10.1016/j.jsurg.2024.03.004">How to build custom AI chatbots for surgical education</a><br>
+      <a href="https://doi.org/10.1007/s44186-024-00303-z">Testing an AI examiner for surgical oral boards practice</a><br>
+      <a href="https://doi.org/10.1016/j.jss.2023.09.017">A simple, reproducible way to measure trainees’ comfort with core general surgery operations</a><br>
+      <a href="https://doi.org/10.1007/s44186-024-00250-9">Rethinking how we design and use the ABSITE</a><br>
+      <a href="https://doi.org/10.1016/j.amjsurg.2024.04.004">A simulator for teaching laparoscopic ergonomics</a><br>
+      <a href="https://doi.org/10.1016/j.jsurg.2023.09.012">Teaching design thinking to surgical trainees</a><br>
+      <a href="https://doi.org/10.1097/SLA.0000000000006728">What surgeons at ten US hospitals think about sustainability</a><br>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/39937564/">How the main surgeons’ political action committee spends its money</a></p>
+    </section>
+
+    <section aria-labelledby="writing">
+      <h2 id="writing">Some things I’ve written:</h2>
+      <p><a href="https://www.ideasurg.pub/why-surgery-needs-ideas/">Why surgery needs I.D.E.A.S.</a><br>
+      <a href="https://doi.org/10.59350/d1g01-se228">Design thinking and building creative immunity</a><br>
+      <a href="https://www.ideasurg.pub/residency-visual-abstract/">The residency visual abstract</a><br>
+      <a href="https://www.ideasurg.pub/interview-questions/">What to ask at the end of a residency interview</a></p>
+    </section>
+
+    <section aria-labelledby="projects">
+      <h2 id="projects">Some things I’ve built:</h2>
+      <p><a href="https://tssathe.notion.site/What-s-the-Stitch-5422f04654554181a0b01925673eaadb">What’s the Stitch</a> — an interactive guide to sutures and needles<br>
+      <a href="https://www.ideasurg.pub/operating-system-for-residency/">An operating system for residency</a> — a shared home for resident knowledge<br>
+      <a href="https://ideasurg.pub">I.D.E.A.S.</a> — a place for experiments in academic surgery<br>
+      <a href="http://whatwegivedocumentary.org">What We Give</a> — a short documentary about body donation</p>
+    </section>
+    <section aria-labelledby="reading">
+      <h2 id="reading">Some interesting things I’ve read:</h2>
+      <p><a href="https://theamericanscholar.org/solitude-and-leadership/">Solitude and Leadership</a> — William Deresiewicz<br>
+      <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch">You and Your Research</a> — Richard Hamming<br>
+      <a href="https://calteches.library.caltech.edu/51/2/CargoCult.htm">Cargo Cult Science</a> — Richard Feynman</p>
+    </section>
+  </main>
+  <footer>
+    <p><a href="Sathe_CV_Updated.pdf">CV</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Sathe+TS%5BAuthor%5D">PubMed</a> · <a href="https://scholar.google.com/citations?user=Ns4HE64AAAAJ&amp;hl=en">Google Scholar</a></p>
+    <p class="signature">Updated <time datetime="2026-10-15">October 15, 2026</time><br>Inspired by <a href="https://nat.org/">nat.org</a></p>
+  </footer>
+  <script>
+    const themeButton = document.querySelector('.theme-toggle');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const nextTheme = { light: 'dark', dark: 'green', green: 'light' };
+    function currentTheme() {
+      const chosen = document.documentElement.dataset.theme;
+      return Object.prototype.hasOwnProperty.call(nextTheme, chosen) ? chosen : (systemTheme.matches ? 'dark' : 'light');
+    }
+    function updateThemeButton() {
+      const theme = currentTheme();
+      const labels = { light: 'Switch to dark mode', dark: 'Switch to green lighting', green: 'Switch to light mode' };
+      const hints = { light: 'Lights away for laparoscopy', dark: 'Go green', green: 'Bring the lights back' };
+      themeButton.setAttribute('aria-label', labels[theme]);
+      themeButton.title = hints[theme];
+    }
+    themeButton.addEventListener('click', () => {
+      const theme = nextTheme[currentTheme()];
+      document.documentElement.dataset.theme = theme;
+      try { localStorage.setItem('theme', theme); } catch {}
+      updateThemeButton();
+    });
+    if (systemTheme.addEventListener) systemTheme.addEventListener('change', updateThemeButton);
+    updateThemeButton();
+  </script>
+</body>
+</html>
